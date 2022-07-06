@@ -60,19 +60,39 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="140" id="bRx-5z-okc"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ahN-qO-iZA">
-                                                            <size key="itemSize" width="128" height="128"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="ahN-qO-iZA">
+                                                            <size key="itemSize" width="200" height="140"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yYT-hT-0Tf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <rect key="frame" x="8" y="0.0" width="200" height="140"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="99z-Hg-J8N">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="140"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-0A-W3Q">
+                                                                            <rect key="frame" x="8" y="8" width="184" height="100.5"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UL-m7-YRq">
+                                                                            <rect key="frame" x="8" y="112.5" width="184" height="19.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="8UL-m7-YRq" firstAttribute="leading" secondItem="99z-Hg-J8N" secondAttribute="leading" constant="8" id="4Zd-Pd-tpM"/>
+                                                                        <constraint firstItem="Pza-0A-W3Q" firstAttribute="top" secondItem="99z-Hg-J8N" secondAttribute="top" constant="8" id="DY0-rz-qDz"/>
+                                                                        <constraint firstItem="Pza-0A-W3Q" firstAttribute="leading" secondItem="99z-Hg-J8N" secondAttribute="leading" constant="8" id="Dnr-D8-YRL"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="8UL-m7-YRq" secondAttribute="trailing" constant="8" id="FVL-di-lj7"/>
+                                                                        <constraint firstItem="8UL-m7-YRq" firstAttribute="top" secondItem="Pza-0A-W3Q" secondAttribute="bottom" constant="4" id="GPp-Gl-o1F"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="8UL-m7-YRq" secondAttribute="bottom" constant="8" id="vVV-cb-zRz"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Pza-0A-W3Q" secondAttribute="trailing" constant="8" id="zF0-iP-R1F"/>
+                                                                    </constraints>
                                                                 </collectionViewCellContentView>
                                                             </collectionViewCell>
                                                         </cells>
@@ -116,7 +136,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="342" id="EMG-DB-VDp"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vE0-TJ-st0">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="vE0-TJ-st0">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -227,6 +247,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="knp-Cw-ita" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5SJ-dO-4x6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
