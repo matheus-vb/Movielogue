@@ -232,7 +232,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="318" id="hN8-H6-aYx"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="8pN-jg-WzP">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="8pN-jg-WzP">
                                                             <size key="itemSize" width="200" height="299"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -240,7 +240,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UqZ-Ne-04a">
-                                                                <rect key="frame" x="8" y="0.0" width="200" height="299"/>
+                                                                <rect key="frame" x="8" y="9.5" width="200" height="299"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BBG-tf-pYf">
                                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="299"/>
@@ -261,7 +261,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;date&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAN-MX-iCG">
                                                                                     <rect key="frame" x="132" y="0.0" width="52" height="18"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                                    <nil key="textColor"/>
+                                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
