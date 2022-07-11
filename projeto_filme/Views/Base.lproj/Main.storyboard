@@ -12,7 +12,7 @@
         <!--Featured-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Featured" id="BYZ-38-t0r" customClass="ViewController" customModule="projeto_filme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Featured" id="BYZ-38-t0r" customClass="FeaturedViewController" customModule="projeto_filme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1346"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,6 +311,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Featured" id="0z2-QD-3Aw"/>
                     <size key="freeformSize" width="414" height="1346"/>
+                    <connections>
+                        <outlet property="popularCollectionView" destination="90A-8f-dK6" id="9gK-Iy-baJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

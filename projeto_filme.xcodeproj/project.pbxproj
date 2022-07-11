@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		863375A32874AEDC0031784D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375A22874AEDC0031784D /* AppDelegate.swift */; };
 		863375A52874AEDC0031784D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375A42874AEDC0031784D /* SceneDelegate.swift */; };
-		863375A72874AEDC0031784D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375A62874AEDC0031784D /* ViewController.swift */; };
+		863375A72874AEDC0031784D /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375A62874AEDC0031784D /* FeaturedViewController.swift */; };
 		863375AA2874AEDC0031784D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863375A82874AEDC0031784D /* Main.storyboard */; };
 		863375AD2874AEDC0031784D /* projeto_filme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 863375AB2874AEDC0031784D /* projeto_filme.xcdatamodeld */; };
 		863375AF2874AEDD0031784D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863375AE2874AEDD0031784D /* Assets.xcassets */; };
 		863375B22874AEDD0031784D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863375B02874AEDD0031784D /* LaunchScreen.storyboard */; };
+		863375E3287C97BC0031784D /* popularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375E2287C97BC0031784D /* popularCollectionViewCell.swift */; };
+		863375E5287C98410031784D /* nowplayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375E4287C98410031784D /* nowplayingCollectionViewCell.swift */; };
+		863375E7287C98A70031784D /* upcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375E6287C98A70031784D /* upcomingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8633759F2874AEDC0031784D /* projeto_filme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projeto_filme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863375A22874AEDC0031784D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863375A42874AEDC0031784D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		863375A62874AEDC0031784D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		863375A62874AEDC0031784D /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		863375A92874AEDC0031784D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		863375AC2874AEDC0031784D /* projeto_filme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = projeto_filme.xcdatamodel; sourceTree = "<group>"; };
 		863375AE2874AEDD0031784D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		863375B12874AEDD0031784D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		863375B32874AEDD0031784D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		863375E2287C97BC0031784D /* popularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popularCollectionViewCell.swift; sourceTree = "<group>"; };
+		863375E4287C98410031784D /* nowplayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nowplayingCollectionViewCell.swift; sourceTree = "<group>"; };
+		863375E6287C98A70031784D /* upcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +66,33 @@
 			children = (
 				863375A22874AEDC0031784D /* AppDelegate.swift */,
 				863375A42874AEDC0031784D /* SceneDelegate.swift */,
-				863375A62874AEDC0031784D /* ViewController.swift */,
-				863375A82874AEDC0031784D /* Main.storyboard */,
+				863375E8287C993D0031784D /* Controllers */,
+				863375E9287C9A1B0031784D /* Views */,
 				863375AE2874AEDD0031784D /* Assets.xcassets */,
-				863375B02874AEDD0031784D /* LaunchScreen.storyboard */,
 				863375B32874AEDD0031784D /* Info.plist */,
 				863375AB2874AEDC0031784D /* projeto_filme.xcdatamodeld */,
 			);
 			path = projeto_filme;
+			sourceTree = "<group>";
+		};
+		863375E8287C993D0031784D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				863375A62874AEDC0031784D /* FeaturedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		863375E9287C9A1B0031784D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				863375A82874AEDC0031784D /* Main.storyboard */,
+				863375E2287C97BC0031784D /* popularCollectionViewCell.swift */,
+				863375E4287C98410031784D /* nowplayingCollectionViewCell.swift */,
+				863375E6287C98A70031784D /* upcomingCollectionViewCell.swift */,
+				863375B02874AEDD0031784D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				863375A72874AEDC0031784D /* ViewController.swift in Sources */,
+				863375E5287C98410031784D /* nowplayingCollectionViewCell.swift in Sources */,
+				863375E3287C97BC0031784D /* popularCollectionViewCell.swift in Sources */,
+				863375A72874AEDC0031784D /* FeaturedViewController.swift in Sources */,
 				863375AD2874AEDC0031784D /* projeto_filme.xcdatamodeld in Sources */,
+				863375E7287C98A70031784D /* upcomingCollectionViewCell.swift in Sources */,
 				863375A32874AEDC0031784D /* AppDelegate.swift in Sources */,
 				863375A52874AEDC0031784D /* SceneDelegate.swift in Sources */,
 			);

@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FeaturedViewController: UIViewController {
 
+    @IBOutlet var popularCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
