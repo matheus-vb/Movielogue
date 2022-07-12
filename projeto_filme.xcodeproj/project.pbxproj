@@ -23,6 +23,7 @@
 		863375F6287DF5060031784D /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375F1287DF5060031784D /* Movie+TrendingThisWeek.swift */; };
 		863375F7287DF5060031784D /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375F2287DF5060031784D /* Movie+NowPlaying.swift */; };
 		863375F8287DF5060031784D /* Movie+TrendingToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375F3287DF5060031784D /* Movie+TrendingToday.swift */; };
+		863375FA287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375F9287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		863375F1287DF5060031784D /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
 		863375F2287DF5060031784D /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
 		863375F3287DF5060031784D /* Movie+TrendingToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingToday.swift"; sourceTree = "<group>"; };
+		863375F9287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				863375A62874AEDC0031784D /* FeaturedViewController.swift */,
+				863375F9287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863375FA287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				863375E5287C98410031784D /* nowplayingCollectionViewCell.swift in Sources */,
 				863375F6287DF5060031784D /* Movie+TrendingThisWeek.swift in Sources */,
 				863375E3287C97BC0031784D /* popularCollectionViewCell.swift in Sources */,
