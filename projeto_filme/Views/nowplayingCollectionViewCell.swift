@@ -8,5 +8,8 @@
 import UIKit
 
 class nowplayingCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
     
+    @IBOutlet var dateLabel: UILabel!
 }

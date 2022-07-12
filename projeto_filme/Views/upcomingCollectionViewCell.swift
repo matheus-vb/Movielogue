@@ -8,5 +8,8 @@
 import UIKit
 
 class upcomingCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var date: UILabel!
     
 }

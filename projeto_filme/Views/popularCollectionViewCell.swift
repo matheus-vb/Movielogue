@@ -9,4 +9,6 @@ import UIKit
 
 class popularCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var image: UIImageView!
 }

@@ -68,7 +68,7 @@
                                                             <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yYT-hT-0Tf">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCell" id="yYT-hT-0Tf" customClass="popularCollectionViewCell" customModule="projeto_filme" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="0.0" width="200" height="140"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="99z-Hg-J8N">
@@ -95,6 +95,10 @@
                                                                         <constraint firstAttribute="trailing" secondItem="Pza-0A-W3Q" secondAttribute="trailing" constant="8" id="zF0-iP-R1F"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="image" destination="Pza-0A-W3Q" id="oAa-o8-T0D"/>
+                                                                    <outlet property="titleLabel" destination="8UL-m7-YRq" id="zvC-4u-pki"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -145,7 +149,7 @@
                                                             <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qRo-dU-U6T">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qRo-dU-U6T" customClass="nowplayingCollectionViewCell" customModule="projeto_filme" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="251" height="114"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9g5-tC-bsj">
@@ -192,6 +196,11 @@
                                                                         <constraint firstItem="TrS-jV-F9R" firstAttribute="top" secondItem="9g5-tC-bsj" secondAttribute="top" constant="12" id="t7W-ko-1f9"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="dateLabel" destination="IL1-dx-n4c" id="SsG-Uk-uft"/>
+                                                                    <outlet property="image" destination="TrS-jV-F9R" id="iBJ-zc-Txw"/>
+                                                                    <outlet property="titleLabel" destination="TG8-e6-gh5" id="3OB-DR-gF5"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -242,7 +251,7 @@
                                                             <inset key="sectionInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UqZ-Ne-04a">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UqZ-Ne-04a" customClass="upcomingCollectionViewCell" customModule="projeto_filme" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="9.5" width="200" height="299"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BBG-tf-pYf">
@@ -281,6 +290,11 @@
                                                                         <constraint firstAttribute="trailing" secondItem="oDV-44-RvX" secondAttribute="trailing" constant="8" id="ull-z8-rIa"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="date" destination="WAN-MX-iCG" id="qsI-lE-or6"/>
+                                                                    <outlet property="image" destination="oDV-44-RvX" id="KLh-d4-VaW"/>
+                                                                    <outlet property="name" destination="sWj-MM-hW6" id="1n8-yQ-ulW"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -312,7 +326,9 @@
                     <navigationItem key="navigationItem" title="Featured" id="0z2-QD-3Aw"/>
                     <size key="freeformSize" width="414" height="1346"/>
                     <connections>
+                        <outlet property="nowPlayingCollectionView" destination="S3Z-Jx-vHb" id="F7H-ie-IYC"/>
                         <outlet property="popularCollectionView" destination="90A-8f-dK6" id="9gK-Iy-baJ"/>
+                        <outlet property="upcomingCollectionView" destination="Pwq-Et-1Va" id="7KT-Yt-lyd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

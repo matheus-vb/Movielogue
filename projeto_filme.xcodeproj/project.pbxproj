@@ -64,12 +64,12 @@
 		863375A12874AEDC0031784D /* projeto_filme */ = {
 			isa = PBXGroup;
 			children = (
+				863375B32874AEDD0031784D /* Info.plist */,
 				863375A22874AEDC0031784D /* AppDelegate.swift */,
 				863375A42874AEDC0031784D /* SceneDelegate.swift */,
 				863375E8287C993D0031784D /* Controllers */,
 				863375E9287C9A1B0031784D /* Views */,
-				863375AE2874AEDD0031784D /* Assets.xcassets */,
-				863375B32874AEDD0031784D /* Info.plist */,
+				863375EA287C9E940031784D /* SupportingFiles */,
 				863375AB2874AEDC0031784D /* projeto_filme.xcdatamodeld */,
 			);
 			path = projeto_filme;
@@ -93,6 +93,14 @@
 				863375B02874AEDD0031784D /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		863375EA287C9E940031784D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				863375AE2874AEDD0031784D /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
