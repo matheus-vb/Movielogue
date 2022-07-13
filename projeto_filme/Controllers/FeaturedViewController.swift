@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeaturedViewController: UIViewController, UICollectionViewDelegate {
+class FeaturedViewController: UIViewController {
     
     @IBOutlet var upcomingCollectionView: UICollectionView!
     @IBOutlet var nowPlayingCollectionView: UICollectionView!
@@ -25,5 +25,16 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegate {
         nowPlayingCollectionView.delegate = self
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //passar o filme adiante
+        if let destination = segue.destination as? DetailsViewController {
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
+    }
+    
+    
+    
 }
 

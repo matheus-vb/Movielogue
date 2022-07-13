@@ -15,23 +15,24 @@ extension FeaturedViewController: UICollectionViewDataSource {
         else { return 0 }
     }
     
-    fileprivate func makePopularCell(_ indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = popularCollectionView.dequeueReusableCell(withReuseIdentifier: "popularCell", for: indexPath) as? popularCollectionViewCell {
+    fileprivate func makePopularCell(_ indexPath: IndexPath) -> popularCollectionViewCell {
+        if let cell = popularCollectionView.dequeueReusableCell(withReuseIdentifier: popularCollectionViewCell.cellIdentifier, for: indexPath) as? popularCollectionViewCell {
             cell.titleLabel.text = popularMovies[indexPath.item].title
             cell.imageView.image = UIImage(named: popularMovies[indexPath.item].backdrop)
             return cell
         }
-        return UICollectionViewCell()
+        return popularCollectionViewCell()
     }
     
-    fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: "nowPlayingCell", for: indexPath) as? nowplayingCollectionViewCell {
-            cell.titleLabel.text = nowPlayingMovies[indexPath.item].title
-            cell.dateLabel.text = nowPlayingMovies[indexPath.item].releaseDate
+    fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> nowplayingCollectionViewCell {
+        if let cell = nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: nowplayingCollectionViewCell.cellIdentifier, for: indexPath) as? nowplayingCollectionViewCell {
+            let extractedExpr: String = nowPlayingMovies[indexPath.item].title
+            cell.titleLabel.text = extractedExpr
+            cell.dateLabel.text = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
             cell.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
             return cell
         }
-        return UICollectionViewCell()
+        return nowplayingCollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
