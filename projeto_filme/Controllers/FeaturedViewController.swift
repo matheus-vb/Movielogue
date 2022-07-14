@@ -15,6 +15,7 @@ class FeaturedViewController: UIViewController {
     
     let popularMovies  = Movie.popularMovies()
     let nowPlayingMovies = Movie.nowPlayingMovies()
+    let upcomingMovies = Movie.upcomingMovies()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class FeaturedViewController: UIViewController {
         popularCollectionView.delegate = self
         nowPlayingCollectionView.dataSource = self
         nowPlayingCollectionView.delegate = self
+        upcomingCollectionView.dataSource = self
+        upcomingCollectionView.delegate = self
         
     }
     

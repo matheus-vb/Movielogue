@@ -11,7 +11,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == popularCollectionView { return popularMovies.count }
         else if collectionView == nowPlayingCollectionView { return nowPlayingMovies.count }
-        //else if.... upcoming view
+        else if collectionView == upcomingCollectionView { return upcomingMovies.count }
         else { return 0 }
     }
     
@@ -26,8 +26,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
     
     fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> nowplayingCollectionViewCell {
         if let cell = nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: nowplayingCollectionViewCell.cellIdentifier, for: indexPath) as? nowplayingCollectionViewCell {
-            let extractedExpr: String = nowPlayingMovies[indexPath.item].title
-            cell.titleLabel.text = extractedExpr
+            cell.titleLabel.text = nowPlayingMovies[indexPath.item].title
             cell.dateLabel.text = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
             cell.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
             return cell
@@ -41,9 +40,17 @@ extension FeaturedViewController: UICollectionViewDataSource {
             return makePopularCell(indexPath)
         }
         
-        
         else if collectionView == nowPlayingCollectionView {
             return makeNowPlayingCell(indexPath)
+        }
+        
+        else if collectionView == upcomingCollectionView {
+            if let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as? upcomingCollectionViewCell {
+                cell.image.image = UIImage(named: upcomingMovies[indexPath.item].poster)
+                cell.name.text = upcomingMovies[indexPath.item].title
+                cell.date.text = upcomingMovies[indexPath.item].getUpcomingDate()
+                return cell
+            }
         }
         
         
