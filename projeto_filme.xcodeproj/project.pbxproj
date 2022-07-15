@@ -82,14 +82,13 @@
 		863375A12874AEDC0031784D /* projeto_filme */ = {
 			isa = PBXGroup;
 			children = (
-				863375EC287DEE040031784D /* Models */,
-				863375B32874AEDD0031784D /* Info.plist */,
 				863375A22874AEDC0031784D /* AppDelegate.swift */,
 				863375A42874AEDC0031784D /* SceneDelegate.swift */,
-				863375E8287C993D0031784D /* Controllers */,
+				863375B32874AEDD0031784D /* Info.plist */,
+				863375EC287DEE040031784D /* Models */,
 				863375E9287C9A1B0031784D /* Views */,
+				863375E8287C993D0031784D /* Controllers */,
 				863375EA287C9E940031784D /* SupportingFiles */,
-				863375AB2874AEDC0031784D /* projeto_filme.xcdatamodeld */,
 			);
 			path = projeto_filme;
 			sourceTree = "<group>";
@@ -120,6 +119,7 @@
 		863375EA287C9E940031784D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				863375AB2874AEDC0031784D /* projeto_filme.xcdatamodeld */,
 				863375AE2874AEDD0031784D /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
@@ -128,12 +128,12 @@
 		863375EC287DEE040031784D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				863375F2287DF5060031784D /* Movie+NowPlaying.swift */,
+				863375ED287DEE490031784D /* Movie.swift */,
 				863375F0287DF5060031784D /* Movie+Popular.swift */,
+				863375F2287DF5060031784D /* Movie+NowPlaying.swift */,
 				863375F1287DF5060031784D /* Movie+TrendingThisWeek.swift */,
 				863375F3287DF5060031784D /* Movie+TrendingToday.swift */,
 				863375EF287DF5060031784D /* Movie+Upcoming.swift */,
-				863375ED287DEE490031784D /* Movie.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

@@ -8,8 +8,16 @@
 import UIKit
 
 class upcomingCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var image: UIImageView!
+    static let cellIdentifier = "upcomingCell"
+    
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var name: UILabel!
     @IBOutlet var date: UILabel!
+ 
+    func setup(title: String, release: String, image: UIImage) {
+        name.text = title
+        date.text = release
+        self.imageView.image = image
+    }
     
 }

@@ -59,8 +59,7 @@ struct Movie {
         default:
             monthLabel = ""
         }
-        
-        //switch(releaseDate)
+    
         return "\(monthLabel) \(year)"
     }
 }
