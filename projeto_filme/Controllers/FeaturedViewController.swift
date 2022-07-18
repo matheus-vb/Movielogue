@@ -21,7 +21,7 @@ class FeaturedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         popularCollectionView.dataSource = self
         popularCollectionView.delegate = self
         nowPlayingCollectionView.dataSource = self

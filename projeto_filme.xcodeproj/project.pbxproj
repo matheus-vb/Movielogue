@@ -29,6 +29,10 @@
 		863376002881E7960031784D /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 863375FF2881E7960031784D /* TMDB-Info.plist */; };
 		863376022881EC4A0031784D /* Movie+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376012881EC4A0031784D /* Movie+API.swift */; };
 		863376042881F8CB0031784D /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376032881F8CB0031784D /* MovieResponse.swift */; };
+		863376062885DCC10031784D /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376052885DCC10031784D /* TrendingViewController.swift */; };
+		863376082885EB570031784D /* TrendingViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376072885EB570031784D /* TrendingViewController+DataSource.swift */; };
+		8633760A2885EB660031784D /* TrendingViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376092885EB660031784D /* TrendingViewController+Delegate.swift */; };
+		8633760C2885F89D0031784D /* trendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633760B2885F89D0031784D /* trendingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		863375FF2881E7960031784D /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
 		863376012881EC4A0031784D /* Movie+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+API.swift"; sourceTree = "<group>"; };
 		863376032881F8CB0031784D /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		863376052885DCC10031784D /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		863376072885EB570031784D /* TrendingViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+DataSource.swift"; sourceTree = "<group>"; };
+		863376092885EB660031784D /* TrendingViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+Delegate.swift"; sourceTree = "<group>"; };
+		8633760B2885F89D0031784D /* trendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trendingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,9 @@
 		863375E8287C993D0031784D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				863376052885DCC10031784D /* TrendingViewController.swift */,
+				863376072885EB570031784D /* TrendingViewController+DataSource.swift */,
+				863376092885EB660031784D /* TrendingViewController+Delegate.swift */,
 				863375A62874AEDC0031784D /* FeaturedViewController.swift */,
 				863375F9287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift */,
 				863375FD287F47C50031784D /* FeaturedViewController+UICollectionViewDelegate.swift */,
@@ -117,6 +128,7 @@
 				863375E2287C97BC0031784D /* popularCollectionViewCell.swift */,
 				863375E4287C98410031784D /* nowplayingCollectionViewCell.swift */,
 				863375E6287C98A70031784D /* upcomingCollectionViewCell.swift */,
+				8633760B2885F89D0031784D /* trendingTableViewCell.swift */,
 				863375B02874AEDD0031784D /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -221,6 +233,7 @@
 			files = (
 				863375FA287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				863375E5287C98410031784D /* nowplayingCollectionViewCell.swift in Sources */,
+				863376082885EB570031784D /* TrendingViewController+DataSource.swift in Sources */,
 				863375F6287DF5060031784D /* Movie+TrendingThisWeek.swift in Sources */,
 				863375E3287C97BC0031784D /* popularCollectionViewCell.swift in Sources */,
 				863375A72874AEDC0031784D /* FeaturedViewController.swift in Sources */,
@@ -234,8 +247,11 @@
 				863375EE287DEE490031784D /* Movie.swift in Sources */,
 				863375F4287DF5060031784D /* Movie+Upcoming.swift in Sources */,
 				863376022881EC4A0031784D /* Movie+API.swift in Sources */,
+				8633760C2885F89D0031784D /* trendingTableViewCell.swift in Sources */,
+				8633760A2885EB660031784D /* TrendingViewController+Delegate.swift in Sources */,
 				863376042881F8CB0031784D /* MovieResponse.swift in Sources */,
 				863375A52874AEDC0031784D /* SceneDelegate.swift in Sources */,
+				863376062885DCC10031784D /* TrendingViewController.swift in Sources */,
 				863375FC287F3F090031784D /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
