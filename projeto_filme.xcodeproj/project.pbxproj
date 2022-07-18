@@ -26,6 +26,9 @@
 		863375FA287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375F9287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 		863375FC287F3F090031784D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375FB287F3F090031784D /* DetailsViewController.swift */; };
 		863375FE287F47C50031784D /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863375FD287F47C50031784D /* FeaturedViewController+UICollectionViewDelegate.swift */; };
+		863376002881E7960031784D /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 863375FF2881E7960031784D /* TMDB-Info.plist */; };
+		863376022881EC4A0031784D /* Movie+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376012881EC4A0031784D /* Movie+API.swift */; };
+		863376042881F8CB0031784D /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376032881F8CB0031784D /* MovieResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		863375F9287E14500031784D /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		863375FB287F3F090031784D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		863375FD287F47C50031784D /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		863375FF2881E7960031784D /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
+		863376012881EC4A0031784D /* Movie+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+API.swift"; sourceTree = "<group>"; };
+		863376032881F8CB0031784D /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 			children = (
 				863375AB2874AEDC0031784D /* projeto_filme.xcdatamodeld */,
 				863375AE2874AEDD0031784D /* Assets.xcassets */,
+				863375FF2881E7960031784D /* TMDB-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -129,11 +136,13 @@
 			isa = PBXGroup;
 			children = (
 				863375ED287DEE490031784D /* Movie.swift */,
+				863376012881EC4A0031784D /* Movie+API.swift */,
 				863375F0287DF5060031784D /* Movie+Popular.swift */,
 				863375F2287DF5060031784D /* Movie+NowPlaying.swift */,
 				863375F1287DF5060031784D /* Movie+TrendingThisWeek.swift */,
 				863375F3287DF5060031784D /* Movie+TrendingToday.swift */,
 				863375EF287DF5060031784D /* Movie+Upcoming.swift */,
+				863376032881F8CB0031784D /* MovieResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -197,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				863375B22874AEDD0031784D /* LaunchScreen.storyboard in Resources */,
+				863376002881E7960031784D /* TMDB-Info.plist in Resources */,
 				863375AF2874AEDD0031784D /* Assets.xcassets in Resources */,
 				863375AA2874AEDC0031784D /* Main.storyboard in Resources */,
 			);
@@ -223,6 +233,8 @@
 				863375F5287DF5060031784D /* Movie+Popular.swift in Sources */,
 				863375EE287DEE490031784D /* Movie.swift in Sources */,
 				863375F4287DF5060031784D /* Movie+Upcoming.swift in Sources */,
+				863376022881EC4A0031784D /* Movie+API.swift in Sources */,
+				863376042881F8CB0031784D /* MovieResponse.swift in Sources */,
 				863375A52874AEDC0031784D /* SceneDelegate.swift in Sources */,
 				863375FC287F3F090031784D /* DetailsViewController.swift in Sources */,
 			);

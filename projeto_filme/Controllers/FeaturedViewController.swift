@@ -13,9 +13,11 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var nowPlayingCollectionView: UICollectionView!
     @IBOutlet var popularCollectionView: UICollectionView!
     
-    let popularMovies  = Movie.popularMovies()
-    let nowPlayingMovies = Movie.nowPlayingMovies()
-    let upcomingMovies = Movie.upcomingMovies()
+
+    
+    var popularMovies: [Movie] = []
+    var nowPlayingMovies: [Movie] = []
+    var upcomingMovies: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,16 @@ class FeaturedViewController: UIViewController {
         nowPlayingCollectionView.delegate = self
         upcomingCollectionView.dataSource = self
         upcomingCollectionView.delegate = self
+        
+        Task {
+            self.popularMovies = await Movie.popularMoviesAPI()
+            self.popularCollectionView.reloadData()
+            self.nowPlayingMovies = await Movie.nowPlayingMoviesAPI()
+            self.nowPlayingCollectionView.reloadData()
+            self.upcomingMovies = await Movie.upcomingMoviesAPI()
+            self.upcomingCollectionView.reloadData()
+        }
+        
         
     }
     
