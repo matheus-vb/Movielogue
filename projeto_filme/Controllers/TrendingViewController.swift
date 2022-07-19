@@ -33,9 +33,12 @@ class TrendingViewController: UIViewController {
     @IBAction func control(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             state = 0
+            print(trendingDayMovies.count)
         }
         else if sender.selectedSegmentIndex == 1 {
             state = 1
+            print(trendingWeekMovies.count)
         }
+        trendingCollectionView.reloadData()
     }
 }

@@ -12,12 +12,12 @@ class trendingTableViewCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var imageV: UIImageView!
+    @IBOutlet var imagePosterView: UIImageView!
     
     func setup(title: String, date: String, image: UIImage) {
         titleLabel.text = title
         dateLabel.text = date
-        self.imageV.image = image
+        self.imagePosterView.image = image
     }
     
     

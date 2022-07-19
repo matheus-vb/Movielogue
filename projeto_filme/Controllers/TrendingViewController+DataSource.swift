@@ -18,30 +18,44 @@ extension TrendingViewController: UITableViewDataSource {
         else {
             return 0
         }
+        //return trendingDayMovies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if state == 0 {
-            if let cell = trendingCollectionView.dequeueReusableCell(withIdentifier: trendingTableViewCell.cellIdentifier, for: indexPath) as? trendingTableViewCell {
-                
-                cell.setup(title: trendingDayMovies[indexPath.item].title, date: trendingDayMovies[indexPath.item].releaseDate, image: UIImage())
-                
-                let movie = trendingDayMovies[indexPath.item]
-                
-                Task {
-                    let imageData = await Movie.donwloadImageData(withPath: movie.posterPath)
-                    let image = UIImage(data: imageData) ?? UIImage()
-                    cell.setup(title: movie.title, date: trendingDayMovies[indexPath.item].releaseDate, image: image)
-                }
-                
-                return cell
+            let cell = trendingCollectionView.dequeueReusableCell(withIdentifier: "trendingCell", for: indexPath) as! trendingTableViewCell
+            
+            let movie = trendingDayMovies[indexPath.item]
+            
+            cell.setup(title: movie.title, date: movie.releaseDate, image: UIImage())
+            
+            Task {
+                let imageData = await Movie.donwloadImageData(withPath: movie.posterPath)
+                let image = UIImage(data: imageData) ?? UIImage()
+                cell.setup(title: movie.title, date: movie.releaseDate, image: image)
             }
+            return cell
+        }
+        
+        else if state == 1 {
+            let cell = trendingCollectionView.dequeueReusableCell(withIdentifier: "trendingCell", for: indexPath) as! trendingTableViewCell
+            
+            let movie = trendingWeekMovies[indexPath.item]
+            
+            cell.setup(title: movie.title, date: movie.releaseDate, image: UIImage())
+            
+            Task {
+                let imageData = await Movie.donwloadImageData(withPath: movie.posterPath)
+                let image = UIImage(data: imageData) ?? UIImage()
+                cell.setup(title: movie.title, date: movie.releaseDate, image: image)
+            }
+            return cell
+        }
+        else {
+            return UITableViewCell()
         }
         
         
-        return UITableViewCell()
     }
-    
-
-
 }

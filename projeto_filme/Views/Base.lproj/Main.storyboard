@@ -523,6 +523,19 @@
             </objects>
             <point key="canvasLocation" x="-207" y="131"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aM3-bq-dud">
+            <objects>
+                <navigationController id="kyo-gs-ksh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BFR-fV-Pwu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ps2-QA-oLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1491" y="923"/>
+        </scene>
         <!--Trending-->
         <scene sceneID="xD8-rl-uhL">
             <objects>
@@ -551,8 +564,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Swf-ke-JIe">
                                 <rect key="frame" x="11.5" y="148" width="391" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Today"/>
+                                    <segment title="This week"/>
                                 </segments>
                                 <connections>
                                     <action selector="control:" destination="TG3-S6-jmq" eventType="valueChanged" id="6jh-HB-IDv"/>
@@ -622,7 +635,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="OT6-xh-hVy" id="DDo-uV-caJ"/>
-                                            <outlet property="image" destination="36w-49-AxT" id="Qrh-ot-zIQ"/>
+                                            <outlet property="imagePosterView" destination="36w-49-AxT" id="rWc-0U-aK4"/>
                                             <outlet property="titleLabel" destination="bzn-2z-k2W" id="Yek-Vq-q1Q"/>
                                         </connections>
                                     </tableViewCell>
