@@ -36,6 +36,7 @@
 		8633760E288667890031784D /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633760D288667890031784D /* searchViewController.swift */; };
 		8633761028866ACC0031784D /* searchViewControler+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633760F28866ACC0031784D /* searchViewControler+UITableViewDataSource.swift */; };
 		8633761228872A3F0031784D /* searchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633761128872A3F0031784D /* searchTableViewCell.swift */; };
+		863376142887315A0031784D /* searchViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863376132887315A0031784D /* searchViewController+UITableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		8633760D288667890031784D /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		8633760F28866ACC0031784D /* searchViewControler+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "searchViewControler+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		8633761128872A3F0031784D /* searchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTableViewCell.swift; sourceTree = "<group>"; };
+		863376132887315A0031784D /* searchViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "searchViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				863375FD287F47C50031784D /* FeaturedViewController+UICollectionViewDelegate.swift */,
 				863375FB287F3F090031784D /* DetailsViewController.swift */,
 				8633760D288667890031784D /* searchViewController.swift */,
+				863376132887315A0031784D /* searchViewController+UITableViewDelegate.swift */,
 				8633760F28866ACC0031784D /* searchViewControler+UITableViewDataSource.swift */,
 			);
 			path = Controllers;
@@ -265,6 +268,7 @@
 				863375A52874AEDC0031784D /* SceneDelegate.swift in Sources */,
 				863376062885DCC10031784D /* TrendingViewController.swift in Sources */,
 				863375FC287F3F090031784D /* DetailsViewController.swift in Sources */,
+				863376142887315A0031784D /* searchViewController+UITableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

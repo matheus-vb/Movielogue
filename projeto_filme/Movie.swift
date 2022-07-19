@@ -28,6 +28,7 @@ struct Movie: Codable {
         
         let year = Int(rDate[rangeYear])!
         
+        
         let startMonth = rDate.index(rDate.startIndex, offsetBy: 5)
         let endMonth = rDate.index(rDate.startIndex, offsetBy: 6)
         let rangeMonth = startMonth...endMonth

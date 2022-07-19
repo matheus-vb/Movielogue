@@ -7,7 +7,7 @@
 
 import UIKit
 
-class searchViewController: UIViewController, UISearchResultsUpdating, UITableViewDelegate {
+class searchViewController: UIViewController, UISearchResultsUpdating {
     
     
     @IBOutlet var searchTableView: UITableView!
@@ -43,7 +43,12 @@ class searchViewController: UIViewController, UISearchResultsUpdating, UITableVi
         
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
+    }
     
     
 

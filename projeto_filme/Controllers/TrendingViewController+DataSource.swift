@@ -28,12 +28,12 @@ extension TrendingViewController: UITableViewDataSource {
             
             let movie = trendingDayMovies[indexPath.item]
             
-            cell.setup(title: movie.title, date: movie.releaseDate ?? "", image: UIImage())
+            cell.setup(title: movie.title, date: movie.getUpcomingDate(), image: UIImage())
             
             Task {
                 let imageData = await Movie.donwloadImageData(withPath: movie.posterPath ?? "")
                 let image = UIImage(data: imageData) ?? UIImage()
-                cell.setup(title: movie.title, date: movie.releaseDate ?? "", image: image)
+                cell.setup(title: movie.title, date: movie.getUpcomingDate(), image: image)
             }
             return cell
         }
@@ -43,12 +43,12 @@ extension TrendingViewController: UITableViewDataSource {
             
             let movie = trendingWeekMovies[indexPath.item]
             
-            cell.setup(title: movie.title, date: movie.releaseDate ?? "", image: UIImage())
+            cell.setup(title: movie.title, date: movie.getUpcomingDate(), image: UIImage())
             
             Task {
                 let imageData = await Movie.donwloadImageData(withPath: movie.posterPath ?? "")
                 let image = UIImage(data: imageData) ?? UIImage()
-                cell.setup(title: movie.title, date: movie.releaseDate ?? "", image: image)
+                cell.setup(title: movie.title, date: movie.getUpcomingDate(), image: image)
             }
             return cell
         }
