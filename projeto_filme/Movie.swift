@@ -9,26 +9,30 @@ import Foundation
 
 struct Movie: Codable {
     let title: String
-    let posterPath: String
-    let backdropPath: String
+    let posterPath: String?
+    let backdropPath: String?
     let voteAverage: Float
-    let releaseDate: String
+    let releaseDate: String?
     let overview: String
     let genres: [String]?
     
     func getUpcomingDate() -> String {
         
-        let startYear = releaseDate.index(releaseDate.startIndex, offsetBy: 2)
-        let endYear = releaseDate.index(releaseDate.startIndex, offsetBy: 3)
+        guard let rDate = releaseDate else {
+            return ""
+        }
+        
+        let startYear = rDate.index(rDate.startIndex, offsetBy: 2)
+        let endYear = rDate.index(rDate.startIndex, offsetBy: 3)
         let rangeYear = startYear...endYear
         
-        let year = Int(releaseDate[rangeYear])!
+        let year = Int(rDate[rangeYear])!
         
-        let startMonth = releaseDate.index(releaseDate.startIndex, offsetBy: 5)
-        let endMonth = releaseDate.index(releaseDate.startIndex, offsetBy: 6)
+        let startMonth = rDate.index(rDate.startIndex, offsetBy: 5)
+        let endMonth = rDate.index(rDate.startIndex, offsetBy: 6)
         let rangeMonth = startMonth...endMonth
 
-        let month = Int(releaseDate[rangeMonth])!
+        let month = Int(rDate[rangeMonth])!
         let monthLabel: String
         
         switch(month){

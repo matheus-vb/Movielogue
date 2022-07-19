@@ -150,6 +150,39 @@ extension Movie {
         return []
     }
     
+    //MARK: - Search Movies download
+
+    static func searchMoviesAPI(title: String) async -> [Movie] {
+        var components = Movie.urlComponents
+        components.path = "/3/search/movie"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "query", value: title),
+            //URLQueryItem(name: "page", value: "1")
+        ]
+        
+        let session = URLSession.shared
+        
+        print(components)
+        
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            
+            return movieResult.results
+            
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
+    
+    
     //MARK: - Image download
     static func donwloadImageData(withPath: String) async -> Data {
         let urlString = "https://image.tmdb.org/t/p/w780\(withPath)"
