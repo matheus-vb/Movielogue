@@ -163,7 +163,7 @@ extension Movie {
         
         let session = URLSession.shared
         
-        print(components)
+        //print(components)
         
         do {
             let (data, response) = try await session.data(from: components.url!)

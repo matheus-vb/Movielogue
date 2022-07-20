@@ -43,6 +43,11 @@
                                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="See all"/>
+                                                                        <connections>
+                                                                            <segue destination="8zI-C6-sHg" kind="popoverPresentation" identifier="popularSeeAll" popoverAnchorView="7W5-6C-LVG" id="fen-8k-mnX">
+                                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                                            </segue>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -127,6 +132,11 @@
                                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="See all"/>
+                                                                        <connections>
+                                                                            <segue destination="8zI-C6-sHg" kind="popoverPresentation" identifier="nowPlayingSeeAll" popoverAnchorView="h3d-Pw-uh5" id="3Us-76-YUY">
+                                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                                            </segue>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -229,6 +239,11 @@
                                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="See all"/>
+                                                                        <connections>
+                                                                            <segue destination="8zI-C6-sHg" kind="popoverPresentation" identifier="upcomingSeeAll" popoverAnchorView="6GZ-Wx-gtB" id="Mlt-cU-14K">
+                                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                                            </segue>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -639,6 +654,102 @@
             </objects>
             <point key="canvasLocation" x="1906" y="1640"/>
         </scene>
+        <!--See All View Controller-->
+        <scene sceneID="2dw-qV-Rds">
+            <objects>
+                <viewController id="8zI-C6-sHg" customClass="SeeAllViewController" customModule="projeto_filme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oAt-Gc-ZNp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fqi-Du-Bbs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="seeAllCell" rowHeight="122" id="iX8-CD-DA4" customClass="SeeAllTableViewCell" customModule="projeto_filme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="122"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iX8-CD-DA4" id="FGu-hh-3c7">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-8B-bZg">
+                                                    <rect key="frame" x="76" y="0.0" width="309.5" height="122"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-tw-vvQ">
+                                                            <rect key="frame" x="16" y="24" width="96" height="74"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni2-J4-q3b">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HLj-py-YqV">
+                                                                    <rect key="frame" x="0.0" y="28.5" width="96" height="45.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;dateLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APz-eb-zZm">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="zSj-tw-vvQ" firstAttribute="leading" secondItem="TK8-8B-bZg" secondAttribute="leading" constant="16" id="1cw-20-fdZ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zSj-tw-vvQ" secondAttribute="bottom" constant="24" id="DdE-uF-0j9"/>
+                                                        <constraint firstItem="zSj-tw-vvQ" firstAttribute="top" secondItem="TK8-8B-bZg" secondAttribute="top" constant="24" id="ytf-76-iLQ"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8fW-qc-2zD">
+                                                    <rect key="frame" x="16" y="12" width="60" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="59j-i0-Lcw"/>
+                                                        <constraint firstAttribute="height" constant="90" id="caC-te-YFA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8fW-qc-2zD" firstAttribute="leading" secondItem="FGu-hh-3c7" secondAttribute="leading" constant="16" id="AXt-kN-WLg"/>
+                                                <constraint firstAttribute="bottom" secondItem="8fW-qc-2zD" secondAttribute="bottom" constant="12" id="My9-Ay-3fE"/>
+                                                <constraint firstItem="8fW-qc-2zD" firstAttribute="top" secondItem="FGu-hh-3c7" secondAttribute="top" constant="12" id="WsJ-4K-gQD"/>
+                                                <constraint firstAttribute="bottom" secondItem="TK8-8B-bZg" secondAttribute="bottom" id="af9-vK-2UN"/>
+                                                <constraint firstItem="TK8-8B-bZg" firstAttribute="leading" secondItem="8fW-qc-2zD" secondAttribute="trailing" id="jTP-rB-jQ0"/>
+                                                <constraint firstItem="TK8-8B-bZg" firstAttribute="top" secondItem="FGu-hh-3c7" secondAttribute="top" id="kGl-sm-fN8"/>
+                                                <constraint firstAttribute="trailing" secondItem="TK8-8B-bZg" secondAttribute="trailing" id="vYl-oc-6ma"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="APz-eb-zZm" id="hUW-VE-6T0"/>
+                                            <outlet property="imageViewPoster" destination="8fW-qc-2zD" id="SRV-yd-7oX"/>
+                                            <outlet property="titleLabel" destination="ni2-J4-q3b" id="CNw-Ae-udg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yTM-bd-VKL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fqi-Du-Bbs" firstAttribute="leading" secondItem="yTM-bd-VKL" secondAttribute="leading" id="NV1-sn-D2p"/>
+                            <constraint firstItem="fqi-Du-Bbs" firstAttribute="top" secondItem="yTM-bd-VKL" secondAttribute="top" id="X3D-2d-loM"/>
+                            <constraint firstItem="yTM-bd-VKL" firstAttribute="bottom" secondItem="fqi-Du-Bbs" secondAttribute="bottom" id="dZi-Ho-EHq"/>
+                            <constraint firstItem="yTM-bd-VKL" firstAttribute="trailing" secondItem="fqi-Du-Bbs" secondAttribute="trailing" id="jot-RR-r1S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="seeAllTableView" destination="fqi-Du-Bbs" id="ejg-PF-54o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmh-Dr-JZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3719" y="776"/>
+        </scene>
         <!--Trending-->
         <scene sceneID="xD8-rl-uhL">
             <objects>
@@ -757,7 +868,7 @@
                             <constraint firstItem="iqB-bS-mnQ" firstAttribute="trailing" secondItem="Swf-ke-JIe" secondAttribute="trailing" constant="11.5" id="qQo-lc-S6W"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Trending" id="Y1z-k2-PdQ"/>
+                    <navigationItem key="navigationItem" title="Trending" largeTitleDisplayMode="always" id="Y1z-k2-PdQ"/>
                     <connections>
                         <outlet property="trendingCollectionView" destination="CqD-U6-mVp" id="YV7-DB-nbD"/>
                         <segue destination="sDf-9b-mOD" kind="show" identifier="detailsSegue" id="pnV-Wc-MK2"/>
@@ -788,7 +899,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pnV-Wc-MK2"/>
+        <segue reference="Mlt-cU-14K"/>
+        <segue reference="Q8h-tW-FNx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="film" catalog="system" width="128" height="93"/>
