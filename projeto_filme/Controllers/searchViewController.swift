@@ -27,8 +27,6 @@ class searchViewController: UIViewController, UISearchResultsUpdating {
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "Movie title"
         
-        
-        
     }
     
     func updateSearchResults(for searchController: UISearchController) {

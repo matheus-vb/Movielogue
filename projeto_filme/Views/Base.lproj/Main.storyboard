@@ -677,19 +677,19 @@
                                                     <rect key="frame" x="76" y="0.0" width="309.5" height="122"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-tw-vvQ">
-                                                            <rect key="frame" x="16" y="24" width="96" height="74"/>
+                                                            <rect key="frame" x="16" y="24" width="178.5" height="74"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni2-J4-q3b">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni2-J4-q3b">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="178.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HLj-py-YqV">
-                                                                    <rect key="frame" x="0.0" y="28.5" width="96" height="45.5"/>
+                                                                    <rect key="frame" x="0.0" y="28.5" width="178.5" height="45.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;dateLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APz-eb-zZm">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="178.5" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -698,11 +698,30 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="pLP-nX-eFQ">
+                                                            <rect key="frame" x="201" y="24" width="92.5" height="20.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-lg-84q">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="22" height="20"/>
+                                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;rating&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4L-ij-vuw">
+                                                                    <rect key="frame" x="28" y="0.0" width="64.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
+                                                        <constraint firstItem="pLP-nX-eFQ" firstAttribute="top" secondItem="TK8-8B-bZg" secondAttribute="top" constant="24" id="0Vk-VC-YAA"/>
                                                         <constraint firstItem="zSj-tw-vvQ" firstAttribute="leading" secondItem="TK8-8B-bZg" secondAttribute="leading" constant="16" id="1cw-20-fdZ"/>
                                                         <constraint firstAttribute="bottom" secondItem="zSj-tw-vvQ" secondAttribute="bottom" constant="24" id="DdE-uF-0j9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zSj-tw-vvQ" secondAttribute="trailing" constant="115" id="FDY-4c-KJw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pLP-nX-eFQ" secondAttribute="trailing" constant="16" id="Qkm-Pi-E5m"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pLP-nX-eFQ" secondAttribute="bottom" constant="77.5" id="gAT-18-6E1"/>
                                                         <constraint firstItem="zSj-tw-vvQ" firstAttribute="top" secondItem="TK8-8B-bZg" secondAttribute="top" constant="24" id="ytf-76-iLQ"/>
                                                     </constraints>
                                                 </view>
@@ -727,6 +746,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="APz-eb-zZm" id="hUW-VE-6T0"/>
                                             <outlet property="imageViewPoster" destination="8fW-qc-2zD" id="SRV-yd-7oX"/>
+                                            <outlet property="ratingLabel" destination="d4L-ij-vuw" id="MiR-0I-B8h"/>
                                             <outlet property="titleLabel" destination="ni2-J4-q3b" id="CNw-Ae-udg"/>
                                         </connections>
                                     </tableViewCell>
@@ -748,7 +768,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmh-Dr-JZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3719" y="776"/>
+            <point key="canvasLocation" x="3718.840579710145" y="775.44642857142856"/>
         </scene>
         <!--Trending-->
         <scene sceneID="xD8-rl-uhL">

@@ -35,9 +35,11 @@ class DetailsViewController: UIViewController {
             posterImage.image = UIImage(data: posterData) ?? UIImage()
         }
 
+        let rating = String(format: "%.1f", movie.voteAverage)
+        
         titleLabel.text = movie.title
         posterImage.image = UIImage(named: movie.posterPath ?? "")
-        ratingLabel.text = "Rating: \(movie.voteAverage)/10"
+        ratingLabel.text = "Rating: \(rating)/10"
         overviewLabel.text = movie.overview
     }
 }

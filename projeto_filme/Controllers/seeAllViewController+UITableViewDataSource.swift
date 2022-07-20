@@ -18,12 +18,12 @@ extension SeeAllViewController: UITableViewDataSource {
         
         let movie = seeAllMovies[indexPath.item]
         
-        cell?.setup(title: movie.title, date: String(movie.releaseDate?.prefix(4) ?? ""), image: UIImage())
+        cell?.setup(title: movie.title, date: String(movie.releaseDate?.prefix(4) ?? ""), rating: movie.voteAverage, image: UIImage())
     
         Task {
             let imageData = await Movie.donwloadImageData(withPath: movie.posterPath ?? "")
             let image = UIImage(data: imageData) ?? UIImage()
-            cell?.setup(title: movie.title, date: String(movie.releaseDate?.prefix(4) ?? ""), image: image)
+            cell?.setup(title: movie.title, date: String(movie.releaseDate?.prefix(4) ?? ""), rating: movie.voteAverage, image: image)
         }
         
         return cell!

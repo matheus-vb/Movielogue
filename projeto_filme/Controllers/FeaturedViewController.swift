@@ -13,8 +13,6 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var nowPlayingCollectionView: UICollectionView!
     @IBOutlet var popularCollectionView: UICollectionView!
     
-
-    
     var popularMovies: [Movie] = []
     var nowPlayingMovies: [Movie] = []
     var upcomingMovies: [Movie] = []
