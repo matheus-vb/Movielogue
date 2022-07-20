@@ -10,6 +10,7 @@ import Foundation
 extension Movie {
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
     
+    
     //MARK: - Popular download
     
     static func popularMoviesAPI() async -> [Movie] {

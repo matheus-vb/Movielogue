@@ -13,6 +13,7 @@ class searchViewController: UIViewController, UISearchResultsUpdating {
     @IBOutlet var searchTableView: UITableView!
     
     var searchMovies: [Movie] = []
+    var genres: [Genre] = []
     
     let searchController = UISearchController()
     
@@ -40,7 +41,6 @@ class searchViewController: UIViewController, UISearchResultsUpdating {
             print(searchMovies.count)
             searchTableView.reloadData()
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
